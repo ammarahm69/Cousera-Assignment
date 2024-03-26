@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module_2 Assignment</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+            margin-top: 2rem;
+            position: relative;
+            flex-wrap: wrap;
+            /* Add this to allow flex items to wrap */
+        }
+
+        .box {
+            width: 30%;
+            height: 220px;
+            border: 1px solid black;
+            background-color: gray;
+            margin-bottom: 20px;
+            /* Add margin between boxes */
+            position: relative;
+        }
+
+        .inner-box {
+            position: absolute;
+            left: 80%;
+            top: -1px;
+            transform: translateX(-50%);
+            /* Center the inner box horizontally */
+            width: 40%;
+            height: 40px;
+            border: 1px solid black;
+            background-color: palevioletred;
+        }
+
+        .inner-box h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Center the h2 text inside the inner box */
+            margin: 0;
+        }
+
+        .red {
+            background-color: brown;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .set {
+            position: relative;
+            top: 12%;
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 992px){
+            .box{
+                width: 49%;
+            }
+            .box.box3 {
+                width: 100%; /* Full width for .box3 */
+                order: 3; /* Change the order to display .box3 after other boxes */
+                margin-top: 20px; /* Add margin to separate it from the above box */
+            }
+
+        } 
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 100%;
+                /* Full width for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Our Menu</h1>
+    <div class="container">
+        <div class="box">
+            <div class="inner-box">
+                <h2>Chicken</h2>
+            </div>
+            <p class="set">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, exercitationem repudiandae
+                voluptates
+                facere itaque autem dolorem neque amet, enim nihil, natus laborum. Nobis debitis, vero quaerat officiis
+                tempore voluptates exercitationem! enim nihil,
+
+            </p>
+        </div>
+
+        <div class="box">
+            <div class="inner-box red">
+                <h2>Beef</h2>
+            </div>
+            <p class="set">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, exercitationem repudiandae
+                voluptates
+                facere itaque autem dolorem neque amet, enim nihil, natus laborum. Nobis debitis, vero quaerat officiis
+                tempore voluptates exercitationem! enim nihil,
+
+            </p>
+        </div>
+
+        <div class="box box3">
+            <div class="inner-box yellow">
+                <h2>Sushi</h2>
+            </div>
+            <p class="set">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, exercitationem repudiandae
+                voluptates
+                facere itaque autem dolorem neque amet, enim nihil, natus laborum. Nobis debitis, vero quaerat officiis
+                tempore voluptates exercitationem! enim nihil,
+
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
